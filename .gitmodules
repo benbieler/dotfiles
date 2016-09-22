@@ -1,0 +1,30 @@
+[submodule "vimfiles/bundle/tabular"]
+	path = vimfiles/bundle/tabular
+	url = git@github.com:godlygeek/tabular
+[submodule "vimfiles/bundle/vim-fugitive"]
+	path = vimfiles/bundle/vim-fugitive
+	url = git@github.com:tpope/vim-fugitive
+[submodule "vimfiles/bundle/vim-markdown"]
+	path = vimfiles/bundle/vim-markdown
+	url = git@github.com:plasticboy/vim-markdown
+[submodule "vimfiles/bundle/tcomment_vim"]
+	path = vimfiles/bundle/tcomment_vim
+	url = git@github.com:tomtom/tcomment_vim
+[submodule "vimfiles/bundle/vim-airline"]
+	path = vimfiles/bundle/vim-airline
+	url = git@github.com:bling/vim-airline
+[submodule "vimfiles/bundle/nerdtree"]
+	path = vimfiles/bundle/nerdtree
+	url = git@github.com:scrooloose/nerdtree
+[submodule "vimfiles/bundle/vim-nerdtree-tabs"]
+	path = vimfiles/bundle/vim-nerdtree-tabs
+	url = git@github.com:jistr/vim-nerdtree-tabs
+[submodule "vimfiles/bundle/vim-puppet"]
+	path = vimfiles/bundle/vim-puppet
+	url = git@github.com:rodjek/vim-puppet
+[submodule "vimfiles/bundle/solarized.vim"]
+	path = vimfiles/bundle/solarized.vim
+	url = git@github.com:altercation/vim-colors-solarized
+[submodule "vimfiles/bundle/vim-airline-themes"]
+	path = vimfiles/bundle/vim-airline-themes
+	url = git@github.com:vim-airline/vim-airline-themes

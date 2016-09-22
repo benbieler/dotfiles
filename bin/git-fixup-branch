@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+if [[ ! -e .git ]]; then
+  echo "Not in a git repository!"
+  exit 1
+fi
+
+message=$(git log -1 --pretty=%B)
+
+branch=$1
+git branch | grep $branch &> /dev/null
+if [[ $? == 0 ]]; then
+  commits_on_branch=$(git rev-list --count HEAD)
+  commits_on_main=$(git rev-list --count $branch)
+  nr=`expr $commits_on_branch - $commits_on_main - 1`
+
+  git reset --soft HEAD~$nr
+  git commit -m $message 2> /dev/null
+else
+  echo "Can't find branch $branch, aborting!"
+  exit 1
+fi

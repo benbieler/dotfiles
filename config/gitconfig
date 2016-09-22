@@ -1,0 +1,25 @@
+[user]
+  name = Maximilian Bosch
+  email = maximilian.bosch.27@gmail.com
+  signingkey = A376CC9C
+
+[push]
+  default = current
+
+[core]
+  ui = true
+  editor = vim
+  autocrl = false
+  excludesfile = ~/.gitignore
+
+[color]
+  ui = auto
+  branch = auto
+  diff = auto
+  status = auto
+
+[help]
+  autocorrect = 1
+
+[commit]
+  gpgsign = true

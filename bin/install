@@ -1,0 +1,70 @@
+#!/usr/bin/env bash
+
+set -e
+
+# VIM configs
+cp -R ./vimfiles ~/
+if [[ -e ~/.vim ]]; then
+  rm -rf ~/.vim
+fi
+mv ~/vimfiles ~/.vim
+rm -rf ~/vimfiles
+
+# copy pre-configured configs
+cp ./config/gitignore ~/.gitignore
+cp ./config/gitconfig ~/.gitconfig
+cp ./config/gpgconf ~/.gnupg/gpg.conf
+
+# bash sources for the profile
+bashrc=$HOME/.bashrc
+path=$HOME/Projects/dotfiles/scripts 
+
+append_bash_source() {
+  string="source $path/$1.sh"
+  grep -qF $string $bashrc || echo $string >> $bashrc
+}
+
+append_bash_source "bash-it"
+append_bash_source "alias"
+append_bash_source "path"
+
+# load completions
+copy_list() {
+  list=$1
+  for i in "${list[@]}"
+  do
+    path="$2/available/${i}.$3.bash"
+    if [[ ! -f $path ]]; then
+      cp $path $2/enabled/"${i}".$3.bash
+    fi
+  done
+}
+
+completions=(
+  "bash-it"
+  "bundler"
+  "capistrano"
+  "docker"
+  "gem"
+  "git"
+  "npm"
+  "ssh"
+  "vagrant"
+  "virtualbox"
+)
+aliases=(
+  "apt"
+  "bundler"
+  "docker"
+  "git"
+  "fuck"
+  "npm"
+  "vagrant"
+  "vim"
+)
+
+mkdir -p $HOME/.bash_it/aliases/enabled
+mkdir -p $HOME/.bash_it/completions/enabled
+
+copy_list $aliases "$HOME/.bash_it/aliases" "aliases"
+copy_list $completions "$HOME/.bash_it/completion" "completion"
