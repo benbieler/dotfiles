@@ -3,6 +3,7 @@
 set -e
 
 # VIM configs
+echo -e "\e[33mCopying files from 'vimfiles/' to ~/.vim...\e[0m"
 cp -R ./vimfiles ~/
 if [[ -e ~/.vim ]]; then
   rm -rf ~/.vim
@@ -11,17 +12,19 @@ mv ~/vimfiles ~/.vim
 rm -rf ~/vimfiles
 
 # copy pre-configured configs
+echo -e "\e[33mCopying config files (.gitignore, .gitconfig, gpg.conf)...\e[0m"
 cp ./config/gitignore ~/.gitignore
 cp ./config/gitconfig ~/.gitconfig
 cp ./config/gpgconf ~/.gnupg/gpg.conf
 
 # bash sources for the profile
+echo -e "\e[33mAdd scripts from the scripts/ dir to .bashrc if not added yet...\e[0m"
 bashrc=$HOME/.bashrc
 path=$HOME/Projects/dotfiles/scripts 
 
 append_bash_source() {
   string="source $path/$1.sh"
-  grep -qF $string $bashrc || echo $string >> $bashrc
+  grep -q -F "$string" $bashrc || echo $string >> $bashrc
 }
 
 append_bash_source "bash-it"
@@ -29,12 +32,14 @@ append_bash_source "alias"
 append_bash_source "path"
 
 # load completions
+echo -e "\e[33mCopying bash-it tools to the right place...\e[0m"
 copy_list() {
   list=$1
   for i in "${list[@]}"
   do
     path="$2/available/${i}.$3.bash"
     if [[ ! -f $path ]]; then
+      echo -e "\e[33mEnabling $2 feature ${i}\e[0m"
       cp $path $2/enabled/"${i}".$3.bash
     fi
   done
@@ -68,3 +73,5 @@ mkdir -p $HOME/.bash_it/completions/enabled
 
 copy_list $aliases "$HOME/.bash_it/aliases" "aliases"
 copy_list $completions "$HOME/.bash_it/completion" "completion"
+
+echo -e "\e[32mSuccessful synchronized all the configs!\e[0m"

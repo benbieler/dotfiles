@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [[ ! -e .git ]]; then
-  echo "Not in a git repository!"
+  echo -e "\e[31mNot in a git repository!\e[0m"
   exit 1
 fi
 
@@ -15,8 +15,10 @@ if [[ $? == 0 ]]; then
   nr=`expr $commits_on_branch - $commits_on_main - 1`
 
   git reset --soft HEAD~$nr
-  git commit -m $message 2> /dev/null
+  git commit -m $message &> /dev/null
+
+  echo -e "\e[32mSquashed all commits on branch $branch into a single commit with name '$message'!\e[0m"
 else
-  echo "Can't find branch $branch, aborting!"
+  echo -e "\e[31mCan't find branch $branch, aborting!\e[0m"
   exit 1
 fi
