@@ -1,4 +1,5 @@
 execute pathogen#infect()
+execute pathogen#helptags()
 
 syntax on
 filetype indent plugin on
@@ -9,6 +10,7 @@ set nocompatible
 set expandtab
 set smarttab
 set autoindent
+set t_Co=256
 
 "syntastic
 set statusline+=%#warningmsg#
@@ -27,13 +29,13 @@ let g:syntastic_sh_checkers = ['sh']
 
 "some global config params
 let g:vim_markdown_folding_disabled=1
-let g:airline_theme = 'badwolf'
+let g:airline_theme = 'bubblegum'
 
 "linenumbers
 set number
 
 "nicer colorscheme
-colorscheme solarized
+colorscheme tender
 
 "nerdtree
 autocmd vimenter * NERDTree
