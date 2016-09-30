@@ -2,16 +2,35 @@
 
 # some custom aliases. Most of the aliases are provided by `bash-it`.
 # directory navigation (the rest is managed by bash-it)
-alias ~="cd"
+alias ~="cd ~"
 alias proj="cd ~/Projects"
 
 # NPM
 alias nig="npm install -g"
 
 # PHP
-alias phpa="php -a"
+alias phi="php -a"
 alias p="php"
 alias ci="composer install"
 
-# CHMod
+# Utils
 alias +x="chmod +x"
+alias mkdirp="mkdir -p"
+
+# Useful testing shortcuts
+alias rbs="bundle exec rake spec"
+alias npt="npm test"
+alias plt="bin/activator test" # scala play activator
+alias put="bin/phpunit"
+alias bht="bin/behat -f progress --no-snippets"
+
+# Shortcuts for some projects
+alias dotf="cd ~/Projects/dotfiles"
+alias apik="cd ~/Projects/Ma27ApiKeyAuthenticationBundle"
+alias sent="cd ~/Projects/Sententiaregum"
+alias eslv="cd ~/Projects/eslint-plugin-varspacing"
+alias dtvm="cd ~/Projects/deployment-test-vm"
+alias ppmd="cd ~/Projects/puppet-module-devel"
+alias ppnd="cd ~/Projects/puppet-module-devel/dev/nodejs"
+alias flxc="cd ~/Projects/flux-container"
+alias flxr="cd ~/Projects/sententiaregum-flux-react"
