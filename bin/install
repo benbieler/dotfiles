@@ -74,4 +74,4 @@ mkdir -p $HOME/.bash_it/completions/enabled
 copy_list $aliases "$HOME/.bash_it/aliases" "aliases"
 copy_list $completions "$HOME/.bash_it/completion" "completion"
 
-echo -e "\e[32mSuccessful synchronized all the configs!\e[0m"
+echo -e "\e[32mSuccessfully synchronized all the configs!\e[0m"

@@ -28,3 +28,9 @@
 [submodule "vimfiles/bundle/tender.vim"]
 	path = vimfiles/bundle/tender.vim
 	url = git@github.com:jacoborus/tender.vim
+[submodule "vimfiles/bundle/vim-scala"]
+	path = vimfiles/bundle/vim-scala
+	url = git@github.com:derekwyatt/vim-scala
+[submodule "vimfiles/bundle/indentLine"]
+	path = vimfiles/bundle/indentLine
+	url = git@github.com:Yggdroot/indentLine
