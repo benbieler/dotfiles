@@ -5,7 +5,12 @@ if [[ ! -e .git ]]; then
   exit 1
 fi
 
-message=$(git log -1 --pretty=%B)
+message=$(git log -1 --pretty=%B 2> /dev/null)
+
+if [[ $# -eq 0 ]]; then
+  echo -e "\e[31mToo few arguments: branch name required!\e[0m"
+  exit 1
+fi
 
 branch=$1
 git branch | grep $branch &> /dev/null
@@ -14,6 +19,10 @@ if [[ $? == 0 ]]; then
   commits_on_main=$(git rev-list --count $branch)
   nr=`expr $commits_on_branch - $commits_on_main - 1`
 
+  if [[ $nr -le 0 ]]; then
+    echo -e "\e[31mNo commits ahead!\e[0m"
+    exit 1
+  fi
   git reset --soft HEAD~$nr
   git commit -m $message &> /dev/null
 
