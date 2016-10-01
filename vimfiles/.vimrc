@@ -27,6 +27,11 @@ let g:syntastic_puppet_checkers = ['puppet']
 let g:syntastic_ruby_exec = 'ruby'
 let g:syntastic_sh_checkers = ['sh']
 
+"indent helper
+let g:indentLine_color_term = 239
+let g:indentLine_color_gui = '#09AA08'
+let g:indentLine_char = '│'
+
 "some global config params
 let g:vim_markdown_folding_disabled=1
 let g:airline_theme = 'bubblegum'

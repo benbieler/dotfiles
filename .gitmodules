@@ -1,9 +1,6 @@
 [submodule "vimfiles/bundle/vim-fugitive"]
 	path = vimfiles/bundle/vim-fugitive
 	url = git@github.com:tpope/vim-fugitive
-[submodule "vimfiles/bundle/vim-markdown"]
-	path = vimfiles/bundle/vim-markdown
-	url = git@github.com:plasticboy/vim-markdown
 [submodule "vimfiles/bundle/tcomment_vim"]
 	path = vimfiles/bundle/tcomment_vim
 	url = git@github.com:tomtom/tcomment_vim
@@ -34,3 +31,9 @@
 [submodule "vimfiles/bundle/indentLine"]
 	path = vimfiles/bundle/indentLine
 	url = git@github.com:Yggdroot/indentLine
+[submodule "vimfiles/bundle/markdown"]
+	path = vimfiles/bundle/markdown
+	url = git@github.com:gabrielelana/vim-markdown
+[submodule "vimfiles/bundle/vim-tabular"]
+	path = vimfiles/bundle/vim-tabular
+	url = git@github.com:godlygeek/tabular

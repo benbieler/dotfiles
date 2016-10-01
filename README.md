@@ -32,6 +32,7 @@ To squash all the commits of a branch automatically and use only the first commi
 
 ``` shell
 git-fixup-branch master # squashes everything into a single commit which is ahead of master
+```
 
 ## NOTE
 
