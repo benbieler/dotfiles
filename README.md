@@ -4,6 +4,7 @@ My personal dotfiles.
 
 ## Features
 
+- Installs `bash-it` if not exists.
 - Lightweight install script
 - Configuration for `bash-it`
 - Complete `vim` configuration with submodules for plugins

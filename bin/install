@@ -2,6 +2,13 @@
 
 set -e
 
+# install bash-it
+if [[ ! -e ~/.bash_it ]]; then
+  echo -e "\e[33mCloning bash_it into ~/.bash_it\e[0m"
+
+  git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it 2> /dev/null
+fi
+
 # VIM configs
 echo -e "\e[33mCopying files from 'vimfiles/' to ~/.vim...\e[0m"
 cp -R ./vimfiles ~/
