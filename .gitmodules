@@ -37,3 +37,9 @@
 [submodule "vimfiles/bundle/vim-tabular"]
 	path = vimfiles/bundle/vim-tabular
 	url = git@github.com:godlygeek/tabular
+[submodule "vimfiles/bundle/vim-jsx"]
+	path = vimfiles/bundle/vim-jsx
+	url = git@github.com:mxw/vim-jsx
+[submodule "vimfiles/bundle/vim-javascript"]
+	path = vimfiles/bundle/vim-javascript
+	url = git@github.com:pangloss/vim-javascript
