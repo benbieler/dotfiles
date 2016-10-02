@@ -41,18 +41,20 @@ append_bash_source "path"
 # load completions
 echo -e "\e[33mCopying bash-it tools to the right place...\e[0m"
 copy_list() {
-  list=$1
+  list=("${!1}")
   for i in "${list[@]}"
   do
     path="$2/available/${i}.$3.bash"
-    if [[ ! -f $path ]]; then
-      echo -e "\e[33mEnabling $2 feature ${i}\e[0m"
-      cp $path $2/enabled/"${i}".$3.bash
+    target="$2/enabled/${i}.$3.bash"
+
+    if [[ ! -f $target ]]; then
+      echo -e "\e[33mEnabling $3 feature ${i}\e[0m"
+      cp $path $target
     fi
   done
 }
 
-completions=(
+declare -a completions=(
   "bash-it"
   "bundler"
   "capistrano"
@@ -64,7 +66,7 @@ completions=(
   "vagrant"
   "virtualbox"
 )
-aliases=(
+declare -a aliases=(
   "apt"
   "bundler"
   "docker"
@@ -73,12 +75,13 @@ aliases=(
   "npm"
   "vagrant"
   "vim"
+  "general"
 )
 
 mkdir -p $HOME/.bash_it/aliases/enabled
-mkdir -p $HOME/.bash_it/completions/enabled
+mkdir -p $HOME/.bash_it/completion/enabled
 
-copy_list $aliases "$HOME/.bash_it/aliases" "aliases"
-copy_list $completions "$HOME/.bash_it/completion" "completion"
+copy_list aliases[@] "$HOME/.bash_it/aliases" "aliases"
+copy_list completions[@] "$HOME/.bash_it/completion" "completion"
 
 echo -e "\e[32mSuccessfully synchronized all the configs!\e[0m"
