@@ -20,9 +20,9 @@ rm -rf ~/vimfiles
 
 # copy pre-configured configs
 echo -e "\e[33mCopying config files (.gitignore, .gitconfig, gpg.conf)...\e[0m"
-cp ./config/gitignore ~/.gitignore
-cp ./config/gitconfig ~/.gitconfig
-cp ./config/gpgconf ~/.gnupg/gpg.conf
+cp ./git/gitignore ~/.gitignore
+cp ./git/gitconfig ~/.gitconfig
+cp ./gnupg/gpgconf ~/.gnupg/gpg.conf
 
 # bash sources for the profile
 echo -e "\e[33mAdd scripts from the scripts/ dir to .bashrc if not added yet...\e[0m"
