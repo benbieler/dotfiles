@@ -35,3 +35,6 @@ alias ppnd="cd ~/Projects/puppet-module-devel/dev/nodejs"
 alias ppcp="cd ~/Projects/puppet-module-devel/dev/composer"
 alias flxc="cd ~/Projects/flux-container"
 alias flxr="cd ~/Projects/sententiaregum-flux-react"
+
+# GitHub `hub`
+eval "$(hub alias -s)"
