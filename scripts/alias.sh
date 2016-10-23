@@ -38,3 +38,8 @@ alias flxr="cd ~/Projects/sententiaregum-flux-react"
 
 # GitHub `hub`
 eval "$(hub alias -s)"
+
+# Shortcuts for Ubuntu directories
+alias docs="cd ~/Documents"
+alias pics="cd ~/Pictures"
+alias dwnl="cd ~/Downloads"
