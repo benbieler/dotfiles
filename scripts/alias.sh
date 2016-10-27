@@ -19,6 +19,7 @@ alias mkdirp="mkdir -p"
 
 # Useful testing shortcuts
 alias rbs="bundle exec rake spec"
+alias rbt="bundle exec rake test"
 alias npt="npm test"
 alias plt="bin/activator test" # scala play activator
 alias put="bin/phpunit"
