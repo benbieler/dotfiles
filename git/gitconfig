@@ -23,3 +23,6 @@
 
 [commit]
   gpgsign = true
+
+[alias]
+  glog = log --graph --oneline --decorate --all
