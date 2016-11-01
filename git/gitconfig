@@ -26,3 +26,6 @@
 
 [alias]
   glog = log --graph --oneline --decorate --all
+
+[url "git@github.com:"]
+  insteadOf = gh:
