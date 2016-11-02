@@ -44,3 +44,6 @@ alias flxr="cd ~/Projects/sententiaregum-flux-react"
 alias docs="cd ~/Documents"
 alias pics="cd ~/Pictures"
 alias dwnl="cd ~/Downloads"
+
+# Shortcut to kill packages marked as `rc` by dpkg
+alias remove_rc_pkgs="sudo apt-get remove --purge $(sudo dpkg -l | grep "^rc" | awk '{print $2}' | tr '\n' ' ')"
