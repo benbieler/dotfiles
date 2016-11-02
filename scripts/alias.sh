@@ -46,4 +46,5 @@ alias pics="cd ~/Pictures"
 alias dwnl="cd ~/Downloads"
 
 # Shortcut to kill packages marked as `rc` by dpkg
-alias remove_rc_pkgs="sudo apt-get remove --purge $(sudo dpkg -l | grep "^rc" | awk '{print $2}' | tr '\n' ' ')"
+# credits to http://askubuntu.com/questions/365965/how-to-remove-all-rc-residual-packages-using-command-line-at-once
+alias remove_rc_pkgs="sudo apt-get remove --purge $(dpkg -l | grep "^rc" | awk '{print $2}' | tr '\n' ' ')"
