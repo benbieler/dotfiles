@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# some aliases are private (e.g. shortcuts to private projects)
+source ~/Projects/dotfiles/scripts/private.sh
+
 # some custom aliases. Most of the aliases are provided by `bash-it`.
 # directory navigation (the rest is managed by bash-it)
 alias ~="cd ~"
