@@ -43,6 +43,9 @@ let g:javascript_conceal_NaN            = "ℕ"
 let g:javascript_conceal_super          = "Ω"
 let g:javascript_conceal_arrow_function = "⇒"
 
+"nerdtree fix
+let NERDTreeShowHidden=1
+
 "linenumbers
 set number
 
