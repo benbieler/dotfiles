@@ -45,7 +45,7 @@ let g:javascript_conceal_arrow_function = "⇒"
 
 "nerdtree fix
 let NERDTreeShowHidden=1
-let NERDTreeIgnore = ['\.swp$']
+let NERDTreeIgnore = ['\.swp$', '^.git$']
 
 "linenumbers
 set number
