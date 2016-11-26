@@ -37,8 +37,6 @@ alias dtvm="cd ~/Projects/deployment-test-vm"
 alias ppmd="cd ~/Projects/puppet-module-devel"
 alias ppnd="cd ~/Projects/puppet-module-devel/dev/nodejs"
 alias ppcp="cd ~/Projects/puppet-module-devel/dev/composer"
-alias flxc="cd ~/Projects/flux-container"
-alias flxr="cd ~/Projects/sententiaregum-flux-react"
 
 # Shortcuts for Ubuntu directories
 alias docs="cd ~/Documents"
