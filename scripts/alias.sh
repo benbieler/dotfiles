@@ -11,6 +11,7 @@ alias rb="ruby"
 alias py="python"
 alias cls="clear screen"
 alias sl="ll"
+alias ll="ls -la"
 
 # PHP
 alias phi="php -a"

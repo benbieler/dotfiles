@@ -31,14 +31,4 @@ cp ./git/gitignore ~/.gitignore
 cp ./git/gitconfig ~/.gitconfig
 cp ./gnupg/gpgconf ~/.gnupg/gpg.conf
 
-# bash sources for the profile
-echo -e "\e[33mAdd scripts from the scripts/ dir to .bashrc if not added yet...\e[0m"
-bashrc=$HOME/.bashrc
-path=$HOME/Projects/dotfiles/scripts 
-
-append_bash_source() {
-  string="source $path/$1.sh"
-  grep -q -F "$string" $bashrc || echo $string >> $bashrc
-}
-
 echo -e "\e[32mSuccessfully synchronized all the configs!\e[0m"
