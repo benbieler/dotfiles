@@ -3,21 +3,26 @@
 # some aliases are private (e.g. shortcuts to private projects)
 source ~/Projects/dotfiles/scripts/private.sh
 
-# some custom aliases. Most of the aliases are provided by `bash-it`.
-# directory navigation (the rest is managed by bash-it)
+# some custom aliases not provided by oh-my-zsh
 alias ~="cd ~"
 alias proj="cd ~/Projects"
 
-# NPM
-alias nig="npm install -g"
+alias rb="ruby"
+alias py="python"
+alias cls="clear screen"
+alias sl="ll"
 
 # PHP
 alias phi="php -a"
 alias p="php"
-alias ci="composer install"
+
+# NPM
+alias ni="npm install"
+alias nis="npm install --save"
+alias nid="npm install --save-dev"
+alias nig="npm install -g"
 
 # Utils
-alias +x="chmod +x"
 alias mkdirp="mkdir -p"
 
 # Useful testing shortcuts

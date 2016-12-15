@@ -2,12 +2,19 @@
 
 set -e
 
-# install bash-it
-if [[ ! -e ~/.bash_it ]]; then
-  echo -e "\e[33mCloning bash_it into ~/.bash_it\e[0m"
-
-  git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it 2> /dev/null
+# ZSH config
+echo -e "\e[33mBacking up .zshrc and adding the one of oh-my-zsh\e[0m"
+if [[ ! -f ~/.zsh_previous ]]; then
+  cp ~/.zshrc ~/.zsh_previous
 fi
+if [[ ! -f ~/.oh-my-zsh ]]; then
+  cp -R ./.oh-my-zsh ~/.oh-my-zsh
+fi
+if [[ ! -f ~/.oh-my-zsh/themes/lambda-mod.zsh-theme ]]; then
+  cp ./.zsh-theme/lambda-mod.zsh-theme ~/.oh-my-zsh/themes/lambda-mod.zsh-theme
+fi
+rm ~/.zshrc
+cp ./zsh/zshrc ~/.zshrc
 
 # VIM configs
 echo -e "\e[33mCopying files from 'vimfiles/' to ~/.vim...\e[0m"
@@ -33,55 +40,5 @@ append_bash_source() {
   string="source $path/$1.sh"
   grep -q -F "$string" $bashrc || echo $string >> $bashrc
 }
-
-append_bash_source "bash-it"
-append_bash_source "alias"
-append_bash_source "path"
-
-# load completions
-echo -e "\e[33mCopying bash-it tools to the right place...\e[0m"
-copy_list() {
-  list=("${!1}")
-  for i in "${list[@]}"
-  do
-    path="$2/available/${i}.$3.bash"
-    target="$2/enabled/${i}.$3.bash"
-
-    if [[ ! -f $target ]]; then
-      echo -e "\e[33mEnabling $3 feature ${i}\e[0m"
-      cp $path $target
-    fi
-  done
-}
-
-declare -a completions=(
-  "bash-it"
-  "bundler"
-  "capistrano"
-  "docker"
-  "gem"
-  "git"
-  "npm"
-  "ssh"
-  "vagrant"
-  "virtualbox"
-)
-declare -a aliases=(
-  "apt"
-  "bundler"
-  "docker"
-  "git"
-  "fuck"
-  "npm"
-  "vagrant"
-  "vim"
-  "general"
-)
-
-mkdir -p $HOME/.bash_it/aliases/enabled
-mkdir -p $HOME/.bash_it/completion/enabled
-
-copy_list aliases[@] "$HOME/.bash_it/aliases" "aliases"
-copy_list completions[@] "$HOME/.bash_it/completion" "completion"
 
 echo -e "\e[32mSuccessfully synchronized all the configs!\e[0m"

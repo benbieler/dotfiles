@@ -1,6 +1,6 @@
 # Dotfiles
 
-My personal dotfiles.
+My personal dotfiles (vimfiles|zshrc|gitconfig).
 
 __Note:__ this project is highly opinionated and customized for my needs, so it's recommended to create a fork and customize this for your own needs if you'd like to use this for your own needs.
 
