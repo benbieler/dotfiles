@@ -6,7 +6,10 @@ export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 ZSH_THEME="lambda-mod"
-plugins=(git composer vagrant thefuck symfony2 debian npm)
+plugins=(git composer vagrant thefuck symfony2 debian npm
+  gem bundler rake pip grunt gulp gpg-agent docker docker-compose
+  cp capistrano)
+
 source $ZSH/oh-my-zsh.sh
 
 # custom dotfiles stuff
