@@ -3,14 +3,17 @@
 set -e
 
 # ZSH config
-echo -e "\e[33mBacking up .zshrc and adding the one of oh-my-zsh\e[0m"
+echo -e "\e[33mProcessing ZSH setup\e[0m"
 if [[ ! -f ~/.zsh_previous ]]; then
+  echo -e "\e[33mEnsure old .zshrc is backed up\e[0m"
   cp ~/.zshrc ~/.zsh_previous
 fi
 if [[ ! -f ~/.oh-my-zsh ]]; then
+  echo -e "\e[33mEnsure ~/.oh-my-zsh directory exists\e[0m"
   cp -R ./.oh-my-zsh ~/.oh-my-zsh
 fi
 if [[ ! -f ~/.oh-my-zsh/themes/lambda-mod.zsh-theme ]]; then
+  echo -e "\e[33mCopy lambda theme to its destination\e[0m"
   cp ./.zsh-theme/lambda-mod.zsh-theme ~/.oh-my-zsh/themes/lambda-mod.zsh-theme
 fi
 rm ~/.zshrc
