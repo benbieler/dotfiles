@@ -4,19 +4,29 @@ set -e
 
 # ZSH config
 echo -e "\e[33mProcessing ZSH setup\e[0m"
-if [[ ! -f ~/.zsh_previous ]]; then
+
+# move all files/submodules from this repository into the home directory
+if [[ ! -f ./zsh/zsh_previous ]]; then
   echo -e "\e[33mEnsure old .zshrc is backed up\e[0m"
-  cp ~/.zshrc ~/.zsh_previous
+  cp ~/.zshrc ./zsh/zsh_previous
 fi
 if [[ ! -f ~/.oh-my-zsh ]]; then
   echo -e "\e[33mEnsure ~/.oh-my-zsh directory exists\e[0m"
-  cp -R ./.oh-my-zsh ~/.oh-my-zsh
+  cp -R ./zsh/modules/oh-my-zsh ~/.oh-my-zsh
 fi
 if [[ ! -f ~/.oh-my-zsh/themes/lambda-mod.zsh-theme ]]; then
   echo -e "\e[33mCopy lambda theme to its destination\e[0m"
-  cp ./.zsh-theme/lambda-mod.zsh-theme ~/.oh-my-zsh/themes/lambda-mod.zsh-theme
+  cp ./zsh/modules/theme/lambda-mod.zsh-theme ~/.oh-my-zsh/themes/lambda-mod.zsh-theme
 fi
-rm ~/.zshrc
+if [[ ! -f ~/.oh-my-zsh/plugins/zsh-syntax-highlighting ]]; then
+  echo -e "\e[33mCopy zsh-syntax-highlighting plugin into ~/.oh-my-zsh\e[0m"
+  cp -R ./zsh/modules/zsh-syntax-highlighting ~/.oh-my-zsh/plugins/zsh-syntax-highlighting
+fi
+
+# recreate .zshrc all the time
+if [[ -f ~/.zshrc ]]; then
+  rm ~/.zshrc
+fi
 cp ./zsh/zshrc ~/.zshrc
 
 # VIM configs

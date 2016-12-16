@@ -43,9 +43,12 @@
 [submodule "vimfiles/bundle/vim-javascript"]
 	path = vimfiles/bundle/vim-javascript
 	url = git@github.com:pangloss/vim-javascript
-[submodule ".oh-my-zsh"]
-	path = .oh-my-zsh
+[submodule "zsh/modules/oh-my-zsh"]
+	path = zsh/modules/oh-my-zsh
 	url = git@github.com:robbyrussell/oh-my-zsh
-[submodule ".zsh-theme"]
-	path = .zsh-theme
+[submodule "zsh/modules/theme"]
+	path = zsh/modules/theme
 	url = git@github.com:halfo/lambda-mod-zsh-theme
+[submodule "zsh/modules/zsh-syntax-highlighting"]
+	path = zsh/modules/zsh-syntax-highlighting
+	url = git@github.com:zsh-users/zsh-syntax-highlighting

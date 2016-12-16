@@ -6,15 +6,14 @@ export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 ZSH_THEME="lambda-mod"
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
+
 plugins=(git composer vagrant thefuck symfony2 debian npm
   gem bundler rake pip grunt gulp gpg-agent docker docker-compose
-  cp capistrano)
+  cp capistrano zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
 # custom dotfiles stuff
 source "$HOME/Projects/dotfiles/scripts/alias.sh"
 source "$HOME/Projects/dotfiles/scripts/path.sh"
-
-# virtualenv
-export VIRTUAL_ENV_DISABLE_PROMPT=0
