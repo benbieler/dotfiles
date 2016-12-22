@@ -18,23 +18,23 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
-let g:syntastic_php_checkers = ['php']
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_puppet_checkers = ['puppet', 'puppet-lint']
-let g:syntastic_ruby_exec = 'ruby'
-let g:syntastic_sh_checkers = ['sh']
+let g:syntastic_auto_loc_list            = 1
+let g:syntastic_check_on_open            = 1
+let g:syntastic_check_on_wq              = 1
+let g:syntastic_php_checkers             = ['php']
+let g:syntastic_javascript_checkers      = ['eslint']
+let g:syntastic_puppet_checkers          = ['puppet', 'puppet-lint']
+let g:syntastic_ruby_exec                = 'ruby'
+let g:syntastic_sh_checkers              = ['sh']
 
 "indent helper
 let g:indentLine_color_term = 239
-let g:indentLine_color_gui = '#09AA08'
-let g:indentLine_char = '│'
+let g:indentLine_color_gui  = '#09AA08'
+let g:indentLine_char       = '│'
 
 "some global config params
-let g:vim_markdown_folding_disabled=1
-let g:airline_theme = 'bubblegum'
+let g:vim_markdown_folding_disabled = 1
+let g:airline_theme                 = 'bubblegum'
 
 " javascript configuration
 let g:jsx_ext_required                  = 0
@@ -45,7 +45,7 @@ let g:javascript_conceal_arrow_function = "⇒"
 
 "nerdtree fix
 let NERDTreeShowHidden=1
-let NERDTreeIgnore = ['\.swp$', '^.git$', '^.vagrant$']
+let NERDTreeIgnore = ['\.swp$', '^.git$', '^.vagrant$', '^.idea$']
 
 "linenumbers
 set number
@@ -58,3 +58,4 @@ autocmd vimenter * NERDTree
 
 "tabs vs spaces
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
+autocmd Filetype php setlocal ts=4 sts=4 sw=4
