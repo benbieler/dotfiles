@@ -3,7 +3,6 @@ export ZSH=$HOME/.oh-my-zsh
 
 # ZSH configuration
 ZSH_THEME="lambda-mod"
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='bg=8'
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
 plugins=(git composer vagrant thefuck symfony2 ubuntu npm
