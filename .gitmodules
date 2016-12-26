@@ -52,3 +52,12 @@
 [submodule "zsh/modules/zsh-syntax-highlighting"]
 	path = zsh/modules/zsh-syntax-highlighting
 	url = git@github.com:zsh-users/zsh-syntax-highlighting
+[submodule "zsh/modules/puppet-completion-zsh"]
+	path = zsh/modules/puppet-completion-zsh
+	url = git@github.com:dkudrow/puppet-completion-zsh
+[submodule "zsh/modules/ansible-zsh-completion"]
+	path = zsh/modules/ansible-zsh-completion
+	url = git@github.com:nojanath/ansible-zsh-completion
+[submodule "zsh/modules/zsh-comp-gsettings"]
+	path = zsh/modules/zsh-comp-gsettings
+	url = git@github.com:jmatsuzawa/zsh-comp-gsettings

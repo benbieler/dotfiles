@@ -1,6 +1,12 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
+# load custom completion
+zsh_mod_path="$HOME/Projects/dotfiles/zsh/modules"
+
+fpath=($fpath "$zsh_mod_path/puppet-completion-zsh"
+  "$zsh_mod_path/ansible-zsh-completion" "$zsh_mod_path/zsh-comp-gsettings")
+
 # ZSH configuration
 ZSH_THEME="lambda-mod"
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
