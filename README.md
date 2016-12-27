@@ -2,18 +2,15 @@
 
 My personal dotfiles (vimfiles|zshrc|gitconfig).
 
-__Note:__ this project is highly opinionated and customized for my needs, so it's recommended to create a fork and customize this for your own needs if you'd like to use this for your own needs.
-
 ## Features
 
-- Installs `bash-it` if not exists.
-- Lightweight install script
-- Configuration for `bash-it`
-- Complete `vim` configuration with submodules for plugins
-- GIT script to fixup all commits in one branch (so an interactive rebase is obsolete)
-- Global `git` conf
-- Autosign with `no-tty` to allow signing in PHPStorm, too.
-- `alias` declarations to increase productivity.
+- Full ZSH configuration with `oh-my-zsh`, the `lambda-mod-zsh-theme` and several completion plugins
+- Lightweight install script which backups the original `.zshrc` and installs the configuration in the right place of the home directory.
+- `vim` setup with the `tender` theme and several plugins to improve DX.
+- `.gitconfig` with enabled autosign, `vim` as default editor and shortcuts for `github` and `bitbucket`
+- `gpgconf` which ensures that the `agent` and not the `tty` is used for signing, so signing commits from the IDE is easily possible.
+- Several shell aliases to increase productivity when working on the shell.
+- A simple script to fixup all commits of a feature branch into a single commit before merging.
 
 ## Install
 
@@ -25,7 +22,7 @@ bin/install
 
 __NOTE:__ currently the installation depends on this path, but it's planned to fix it.
 
-__NOTE:__ please modify the `config/gitconfig` as it contains some customized data (e.g. my name for GIT commits) that must be customized.
+__NOTE:__ please modify the `git/gitconfig` as it contains some customized data (e.g. my name for GIT commits) that must be customized.
 
 ## GIT fixup tool
 
