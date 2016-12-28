@@ -26,6 +26,12 @@
 
 [alias]
   glog = log --graph --oneline --decorate --all
+  rbr = branch -a
+  psuh = push
+  state = status -sb
+  wshow = show --word-diff=color
+  wdiff = diff --word-diff=color
+  adda = add -A
 
 [url "git@github.com:"]
   insteadOf = gh:
