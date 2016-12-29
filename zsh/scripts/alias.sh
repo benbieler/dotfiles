@@ -14,7 +14,7 @@ alias p="php"
 alias ni="npm install"
 alias nis="npm install --save"
 alias nid="npm install --save-dev"
-alias nig="npm install -g"
+alias nig="sudo npm install -g"
 
 alias aglu="apt list --upgradable"
 
