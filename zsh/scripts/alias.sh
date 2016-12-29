@@ -16,6 +16,8 @@ alias nis="npm install --save"
 alias nid="npm install --save-dev"
 alias nig="npm install -g"
 
+alias aglu="apt list --upgradable"
+
 # directory movement commands
 alias mkdirp="mkdir -p"
 alias l="ls -la"
