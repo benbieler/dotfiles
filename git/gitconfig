@@ -1,7 +1,7 @@
 [user]
   name = Maximilian Bosch
-  email = maximilian.bosch.27@gmail.com
-  signingkey = A376CC9C
+  email = maximilian@mbosch.me
+  signingkey = 091DBF4D1FC46B8E
 
 [push]
   default = current
