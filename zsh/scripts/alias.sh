@@ -29,6 +29,7 @@ alias vrl="vagrant reload"
 alias vr="vagrant resume"
 alias vs="vagrant suspend"
 alias vdstr="vagrant destroy"
+alias vpr="vagrant provision"
 
 # shortcuts for some projects and dirs
 alias dotf="cd ~/Projects/dotfiles"
